@@ -1,0 +1,14 @@
+@mixin grid($cols:1, $gap){
+display: grid;
+grid-template-columns: repeat($cols, 1fr);
+grid-gap: $gap;
+}
+
+@mixin mediaQuery($width: 48rem){
+    // @include mediaQuery($break-lg{
+    // })
+    @media screen and (min-width: $width){
+        @content
+    }
+}
+

@@ -1,0 +1,91 @@
+.banner{
+    .container{
+        background: $clr-light;
+    
+        .banner__wrapper{
+            display: flex;
+            // position: relative;
+            flex-direction: column-reverse;
+            padding: 4rem 1rem;
+            align-items: center;
+            img{
+                height: 35rem;
+                width: 35rem;
+                margin-bottom: 5rem;
+            }
+            .banner__text{
+                padding: 2rem;
+                align-items: center;
+
+              h1{
+                font-size: 4rem;
+                color: $clr-primary;
+                text-align: center;
+                font-weight: 800;
+                }
+            p{
+                align-items: center;
+                text-align: justify;
+                padding: 1rem;
+                margin-bottom: 3rem;
+                
+            }
+               a{
+                font-size: 2rem;
+                margin-left: 13rem;
+                margin-top: 4rem;
+
+               }
+            }
+        }
+    }
+    @include mediaQuery($break-lg){ 
+        .banner__wrapper{
+            flex-direction:row;
+        }
+    }   
+}
+
+.hm-services{
+        background: $clr-dark;
+        &__wrapper{
+            padding: 3rem 2rem;
+            align-items: center;
+            .hm-services__item{
+                text-align: center;
+                padding: 5rem 0;
+                i{
+                    font-size: 5rem;
+                    color: $clr-primary;
+                    padding: 2rem 0;
+                }
+                h4{
+                    color: $clr-primary;
+                    font-size: 3rem;
+
+                }
+                p{
+                    color: $clr-light;
+                    text-align: justify;
+                    padding: 2rem 0;
+                }
+                a{
+                    font-size: 2rem;
+                    &:hover {
+                        color: $clr-dark;
+                        background: $clr-primary;
+                    }
+                }
+            }
+
+        }
+        @include mediaQuery ($break-lg){
+            .hm-services__wrapper{
+                display: flex;
+                padding: 0 3rem;
+                align-items: center;
+            @include grid(3, 5rem)
+                
+            }
+        }
+    }
